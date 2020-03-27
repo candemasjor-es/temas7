@@ -5,15 +5,21 @@ package Ejercicio0;
 
 public class Clase {
     public static void main(String[] args) {
-        Persona p1 = new Persona();
-        	p1.setNombre("Pepe");
-        	p1.setEdad(10);
-        Persona p2 = new Persona();
-        	p2.setNombre("Luis");
-        	p2.setEdad(25);
-        Persona p3 = new Persona();
-        	p3.setNombre("Maria");
-        	p3.setEdad(20);
+    	Estudiante e1 = new Estudiante("Juan", "1ºDAM", 12345);
+		e1.setEdad(20);
+		
+		double[] notas = new double[7];
+		notas[0] = 7;
+		notas[1] = 8.5;
+		notas[2] = 4;
+		notas[3] = 8;
+		notas[4] = 6;
+		notas[5] = 7.5;
+		notas[6] = 5;
+
+		Profesor p1 = new Profesor("Fernando", "D104");
+		p1.setEdad(45);
+		p1.setHorarioTutorias("Lunes de 10:00 a 13:00");
         	
         Coche grupo_1 = new Coche();
         	grupo_1.setColor("Rojo");
