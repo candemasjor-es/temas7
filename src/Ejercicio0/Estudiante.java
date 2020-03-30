@@ -1,6 +1,6 @@
 package Ejercicio0;
 
-public class Estudiante {
+public class Estudiante extends Persona {
 	private int numeroExpediente;
 	private String curso;
 	private double[] notas = new double[7];

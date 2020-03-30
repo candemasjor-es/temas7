@@ -31,10 +31,8 @@ public class Clase {
         	grupo_2.setMarca("Ford");
         	grupo_2.setModelo("Fiesta");
         
-        System.out.println("Nombre " + p1.getNombre()+" tienes "+p1.getEdad()+" años, Coche marca: " +grupo_1.getMarca()+ " Modelo: "+grupo_1.getModelo()+" Calor: "+grupo_1.getColor() );
-        System.out.println("Nombre " + p2.getNombre()+" tienes "+p2.getEdad()+" años, Coche marca: " +grupo_1.getMarca()+ " Modelo: "+grupo_1.getModelo()+" Calor: "+grupo_1.getColor() );
-        System.out.println("Nombre " + p3.getNombre()+" tienes "+p3.getEdad()+" años, Coche marca: " +grupo_2.getMarca()+ " Modelo: "+grupo_2.getModelo()+" Calor: "+grupo_2.getColor()  );
-        
+        	System.out.println(e1.nombre+" tiene un "+ e1.getNotaMedia()+ " de media");
+    		p1.getConsultas();
     }
 }
 

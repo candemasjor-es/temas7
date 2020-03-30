@@ -1,6 +1,6 @@
 package Ejercicio0;
 
-public class Profesor {
+public class Profesor extends Persona {
 private String despacho, horarioTutorias;
 
 	

@@ -4,31 +4,45 @@
 package Ejercicio0;
 
 public class Persona {
-    private String nombre;
-    private int edad;
-    public Persona() {
-        
-    }
 
-    public Persona(String nombre, int edad) {
-        this.nombre = nombre;
-        this.edad = edad;
-    }
+	protected int edad;
+	protected String nombre;
+	protected Coche coche;
+	
+		public Persona() {
+			this.edad=0;
+		}
 
-    public String getNombre() {
-        return this.nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getEdad() {
-        return this.edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
+		public Persona(String nombre) {
+			this.nombre = nombre;
+		}
+		
+		public Persona(String nombre, int edad) {
+			this.nombre = nombre;
+			this.edad = edad;
+		}
+		
+		public void setEdad(int edad) {
+			this.edad = edad;
+		}
+		
+		public int getEdad() {
+			return edad;
+		}
+		
+		public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
+		
+		public String getNombre() {
+			return nombre;
+		}
+		
+		public void setCoche(Coche c) {
+			this.coche = c;
+		}
+		
+		public Coche getCoche() {
+			return coche;
+		}
 }
-
