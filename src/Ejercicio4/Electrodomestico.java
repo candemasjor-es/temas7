@@ -12,15 +12,15 @@ public class Electrodomestico {
 	protected char consumoEnergetico;
 	protected float precioBase, peso;
 	
-	//Constructor por defecto
+
 	public Electrodomestico() {
-		color = "blanco";					// blanco, negro, rojo, azul y gris 
-		consumoEnergetico = 'F';			// de A a F
+		color = "blanco";					
+		consumoEnergetico = 'F';			
 		precioBase = 100;
 		peso = 5;
 	}
 	
-	//Constructor con parametros precioBase y peso
+
 	public Electrodomestico(float precioBase, float peso) {
 		this.color = "blanco";
 		this.consumoEnergetico = 'F';
@@ -28,7 +28,7 @@ public class Electrodomestico {
 		this.peso = peso;
 	}
 	
-	//Constructor con todos los parametros
+
 	public Electrodomestico(String color, char consumoEnergetico, float precioBase, float peso) {
 		comprobarColor(color);
 		comprobarConsumo(consumoEnergetico);
@@ -36,7 +36,7 @@ public class Electrodomestico {
 		this.peso = peso;
 	}
 	
-	//Getters y Setters
+
 	public String getColor() {
 		return color;
 	}
