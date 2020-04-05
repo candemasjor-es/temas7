@@ -3,40 +3,50 @@ package Ejercicio4;
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Electrodomestico lista[]=new Electrodomestico[10];
+		double precioElec = 0, precioLava = 0, precioTele = 0;
+
+		Electrodomestico e1 = new Electrodomestico();
+		Electrodomestico e2 = new Electrodomestico(500, 50);
+		Electrodomestico e3 = new Electrodomestico("negro", 'B', 200, 80);
+		Electrodomestico e4 = new Electrodomestico("gris", 'A', 100, 45);
 		
-		lista[0]=new Electrodomestico(200, 60, 'C', "Verde");
-		lista[1]=new Lavadora(150, 30);
-		lista[2]=new Television(500, 80, 'E', "negro", 42, false);
-		lista[3]=new Electrodomestico();
-		lista[4]=new Electrodomestico(600, 20, 'D', "gris");
-		lista[5]=new Lavadora(300, 40, 'Z', "blanco", 40);
-		lista[6]=new Television(250, 70);
-		lista[7]=new Lavadora(400, 100, 'A', "verde", 15);
-		lista[8]=new Television(200, 60, 'C', "naranja", 30, true);
-		lista[9]=new Electrodomestico(50, 10);
-        
-		double sumaElectrodomesticos=0;
-        double sumaTelevisiones=0;
-        double sumaLavadoras=0;
-        
-        for(int i=0;i<lista.length;i++){
-   
-            if(lista[i] instanceof Electrodomestico){
-                sumaElectrodomesticos+=lista[i].precioFinal();
-            }
-            if(lista[i] instanceof Lavadora){
-                sumaLavadoras+=lista[i].precioFinal();
-            }
-            if(lista[i] instanceof Television){
-                sumaTelevisiones+=lista[i].precioFinal();
-            }
-        }
-        
-        System.out.println("La suma del precio de los electrodomesticos es de "+sumaElectrodomesticos);
-        System.out.println("La suma del precio de las lavadoras es de "+sumaLavadoras);
-        System.out.println("La suma del precio de las televisiones es de "+sumaTelevisiones);
+		Lavadora l1 = new Lavadora();
+		Lavadora l2 = new Lavadora(200, 70);
+		Lavadora l3 = new Lavadora("gris", 'A', 100, 45, 20);
+		
+		Television t1 = new Television();
+		Television t2 = new Television(45, 20);
+		Television t3 = new Television("gris", 'A', 200, 55, 55, true);
+		Electrodomestico[] Electrodomesticos = new Electrodomestico[10];
+		Electrodomesticos[0] = e1;
+		Electrodomesticos[1] = e2;
+		Electrodomesticos[2] = e3;
+		Electrodomesticos[3] = e4;
+		Electrodomesticos[4] = l1;
+		Electrodomesticos[5] = l2;
+		Electrodomesticos[6] = l3;
+		Electrodomesticos[7] = t1;
+		Electrodomesticos[8] = t2;
+		Electrodomesticos[9] = t3;
+		
+		
+		for (int i = 0;i < 10;i++) {
+			System.out.println("Producto "+ (i+1));
+			if (Electrodomesticos[i] instanceof Electrodomestico) {
+				precioElec = precioElec + Electrodomesticos[i].precioFinal();
+			}
+			if (Electrodomesticos[i] instanceof Lavadora) {
+				precioLava = precioLava + Electrodomesticos[i].precioFinal();
+			}
+			if (Electrodomesticos[i] instanceof Television) {
+				precioTele = precioTele + Electrodomesticos[i].precioFinal();
+			}
+			System.out.println(Electrodomesticos[i].precioFinal());
+		}
+		System.out.println("El precio total de electrodomesticos es: "+precioElec+"€ (Total)");
+		System.out.println("El precio total de lavadoras es: "+precioLava+"€");
+		System.out.println("El precio total de televisiones es: "+precioTele+"€");
 	}
+
 
 }

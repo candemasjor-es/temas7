@@ -7,30 +7,43 @@
 package Ejercicio4;
 
 public class Lavadora extends Electrodomestico{
-	private final static int CARGA_DEF=5;
-	private int carga;
+float carga;
 	
-	public Lavadora(){
-        this(PRECIO_BASE_DEF, PESO_DEF, CONSUMO_ENERGETICO_DEF, COLOR_DEF, CARGA_DEF);
-    }
-	public Lavadora(double precioBase, double peso){
-	        this(precioBase, peso, CONSUMO_ENERGETICO_DEF, COLOR_DEF, CARGA_DEF);
-	    }
-	public Lavadora(double precioBase, double peso, char consumoEnergetico, String color, int carga){
-        super(precioBase,peso, consumoEnergetico,color);
-        this.carga=carga;
-    } 
 	
-	public int getCarga() {
-        return carga;
-    }
-	public double precioFinal(){
-        double plus=super.precioFinal();
-        if (carga>30){
-            plus+=50;
-        }
-        return plus;
-    }
+	public Lavadora() {
+		super();
+		carga = 5;
+	}
+	
+	
+	public Lavadora(float precioBase, float peso) {
+		super(precioBase, peso);
+		this.carga = 5;
+	}
+	
+	
+	public Lavadora(String color, char consumoEnergetico, float precioBase, float peso, float carga) {
+		super(color, consumoEnergetico, precioBase, peso);
+		this.carga = carga;
+	}
+	
+	
+	public float getCarga() {
+		return carga;
+	}
+
+	public void setCarga(float carga) {
+		this.carga = carga;
+	}
+	
+
+	@Override public double precioFinal() {
+		double precio = super.precioFinal();
+		if (carga >= 30) {
+			precio = precio + 50;
+		}
+		return precio;
+	}
 	
 	
 }

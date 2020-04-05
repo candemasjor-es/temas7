@@ -7,33 +7,57 @@
 package Ejercicio4;
 
 public class Television extends Electrodomestico{
-	private final static int RESOLUCION_DEF=20;
-	private int resolucion;
-	private boolean sintonizadorTDT;
+	float resolucion;
+	boolean smartTV;
 	
-	public Television(){
-        this(PRECIO_BASE_DEF, PESO_DEF, CONSUMO_ENERGETICO_DEF, COLOR_DEF, RESOLUCION_DEF, false);
-    }
+
+	public Television() {
+		super();
+		resolucion = 20;
+		smartTV = false;
+	}
 	
-	public Television(double precioBase, double peso){
-        this(precioBase, peso, CONSUMO_ENERGETICO_DEF, COLOR_DEF, RESOLUCION_DEF, false);
-    }
+
+	public Television(float precioBase, float peso) {
+		super(precioBase, peso);
+		resolucion = 20;
+		smartTV = false;
+	}
 	
-	public Television(double precioBase, double peso, char consumoEnergetico, String color, int resolucion, boolean sintonizadorTDT){
-        super(precioBase, peso, consumoEnergetico, color);
-        this.resolucion=resolucion;
-        this.sintonizadorTDT=sintonizadorTDT;
-    }
+
+	public Television(String color, char consumoEnergetico, float precioBase, float peso, float resolucion, boolean smartTV) {
+		super(color, consumoEnergetico, precioBase, peso);
+		this.resolucion = resolucion;
+		this.smartTV = smartTV;
+	}
 	
-	public double precioFinal(){
-        double plus=super.precioFinal();
-        if (resolucion>40){
-            plus+=precioBase*0.3;
-        }
-        if (sintonizadorTDT){
-            plus+=50;
-        }
-        return plus;
-    }
+
+	public float getResolucion() {
+		return resolucion;
+	}
+
+	public void setResolucion(float resolucion) {
+		this.resolucion = resolucion;
+	}
+
+	public boolean isSmartTV() {
+		return smartTV;
+	}
+
+	public void setSmartTV(boolean smartTV) {
+		this.smartTV = smartTV;
+	}
+
+
+	@Override public double precioFinal() {
+		double precio = super.precioFinal();
+		if (resolucion >= 40) {
+			precio = precio*1.30;
+		}
+		if (smartTV == true) {
+			precio = precio + 50;
+		}
+		return precio;
+	}
 
 }
