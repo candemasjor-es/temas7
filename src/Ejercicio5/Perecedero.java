@@ -10,17 +10,16 @@ package Ejercicio5;
 public class Perecedero {
 int diasACaducar;
 	
-	//Constructor por defecto
+	
 	public Perecedero() { 
 	}
 	
-	//Constructor parametrizado
+	
 	public Perecedero(String nombre, double precio, int dias) {
 		super(nombre, precio);
 		diasACaducar = dias;
 	}
 	
-	//getters y setters
 	public int getDiasACaducar() {
 		return diasACaducar;
 	}
@@ -29,8 +28,9 @@ int diasACaducar;
 		this.diasACaducar = diasACaducar;
 	}
 
-		  //Metodo calcular (Switch para el divisor por dias)
-@Override public double calcular(int cantidad) {
+		  
+	@Override 
+	public double calcular(int cantidad) {
 		  double total = super.calcular(cantidad);
 		  switch (diasACaducar) {
 		  	case 1:

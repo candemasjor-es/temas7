@@ -27,8 +27,8 @@ int tipo;
 		this.tipo = tipo;
 	}
 	
-	//Metodo calcular
-	@Override public double calcular(int cantidad) {
+	@Override 
+	public double calcular(int cantidad) {
 			  double total = super.calcular(cantidad);
 			  return total;
 		}
