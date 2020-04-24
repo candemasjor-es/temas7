@@ -7,7 +7,7 @@
 */
 package Ejercicio5;
 
-public class Perecedero {
+public class Perecedero extends Producto{
 int diasACaducar;
 	
 	
@@ -37,7 +37,7 @@ int diasACaducar;
 		  		total = total/4;
 		  		break;
 		  	case 2:
-		  		total = total/3;
+		  		total = total/3; 
 		  		break;
 		  	case 3:
 		  		total = total/2;
@@ -46,6 +46,6 @@ int diasACaducar;
 		  		break;
 		  }
 		  return total;
-	}º
+	}
 
 }

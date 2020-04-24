@@ -6,7 +6,7 @@
 */
 package Ejercicio5;
 
-public class NoPerecedero {
+public class NoPerecedero extends Producto{
 int tipo;
 	
 	
